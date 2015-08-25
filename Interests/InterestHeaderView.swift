@@ -35,8 +35,9 @@ class InterestHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         closeButtonBackgroundView.layer.cornerRadius = closeButtonBackgroundView.bounds.width / 2
+        closeButtonBackgroundView.clipsToBounds = true
     }
 
 }
