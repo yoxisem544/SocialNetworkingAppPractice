@@ -230,7 +230,7 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCellWithImage" rowHeight="387" id="Xv2-Wq-GcT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCellWithImage" rowHeight="387" id="Xv2-Wq-GcT" customClass="PostTableViewCell" customModule="Interests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="228" width="600" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xv2-Wq-GcT" id="uXt-pW-jzN">
@@ -275,6 +275,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="💀 15 Likes"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClicked:" destination="Xv2-Wq-GcT" eventType="touchUpInside" id="ueS-MP-Sii"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nw-Zu-Meq" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="152" y="340" width="120" height="30"/>
@@ -283,6 +286,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="😆 Comments"/>
+                                                    <connections>
+                                                        <action selector="commentButtonClicked:" destination="Xv2-Wq-GcT" eventType="touchUpInside" id="Wzv-m5-mKW"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -306,8 +312,17 @@
                                                 <constraint firstItem="0xX-q4-eir" firstAttribute="top" secondItem="uXt-pW-jzN" secondAttribute="topMargin" constant="15" id="xQd-E4-tqb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentButton" destination="2Nw-Zu-Meq" id="z5k-WE-4hi"/>
+                                            <outlet property="createAtLabel" destination="GyS-cw-e5G" id="wdM-8w-LIQ"/>
+                                            <outlet property="likeButton" destination="2ol-4w-r3J" id="gvD-wZ-Ygx"/>
+                                            <outlet property="postImageView" destination="KQF-8l-jYY" id="rF3-xJ-XnC"/>
+                                            <outlet property="postTextLabel" destination="PWQ-4f-PlF" id="2Fz-1Y-uB8"/>
+                                            <outlet property="userNameLabel" destination="0xX-q4-eir" id="bag-fX-inx"/>
+                                            <outlet property="userProfileImageView" destination="zqm-xl-xsr" id="L44-C3-9QB"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCellWithoutImage" rowHeight="171" id="k1L-Gk-deI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCellWithoutImage" rowHeight="171" id="k1L-Gk-deI" customClass="PostTableViewCell" customModule="Interests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="615" width="600" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k1L-Gk-deI" id="A3z-3i-CH4">
@@ -346,6 +361,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="💀 15 Likes"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClicked:" destination="k1L-Gk-deI" eventType="touchUpInside" id="3tO-Ia-Clf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-5z-fzE" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="152" y="117" width="120" height="30"/>
@@ -354,6 +372,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="😆 Comments"/>
+                                                    <connections>
+                                                        <action selector="commentButtonClicked:" destination="k1L-Gk-deI" eventType="touchUpInside" id="oaa-sx-gf4"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -374,6 +395,14 @@
                                                 <constraint firstItem="m14-zF-XpY" firstAttribute="top" secondItem="A3z-3i-CH4" secondAttribute="topMargin" constant="18" id="xDt-Ck-wL8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentButton" destination="dLy-5z-fzE" id="VaZ-b8-eRt"/>
+                                            <outlet property="createAtLabel" destination="m14-zF-XpY" id="FS4-CL-wfN"/>
+                                            <outlet property="likeButton" destination="qcA-Vq-Bbh" id="m7p-VZ-Ych"/>
+                                            <outlet property="postTextLabel" destination="zZT-K9-cOo" id="Wn3-CG-g7F"/>
+                                            <outlet property="userNameLabel" destination="cMT-Uf-dJe" id="dbn-Fg-qJe"/>
+                                            <outlet property="userProfileImageView" destination="8wt-6f-3g4" id="rLK-E4-qsz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

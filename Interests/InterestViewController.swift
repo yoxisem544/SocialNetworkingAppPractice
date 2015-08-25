@@ -19,9 +19,14 @@ class InterestViewController: UIViewController {
     
     private var headerView: InterestHeaderView!
     private var headerMaskLayer: CAShapeLayer!
+    
+    private var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.estimatedRowHeight = 387.0
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
         headerView = tableView.tableHeaderView as! InterestHeaderView
@@ -36,6 +41,12 @@ class InterestViewController: UIViewController {
         headerView.layer.mask = headerMaskLayer
         
         updateHeaderView()
+        
+        fetchPosts()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     override func viewWillLayoutSubviews() {
@@ -70,15 +81,10 @@ class InterestViewController: UIViewController {
         headerMaskLayer?.path = path.CGPath
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func fetchPosts() {
+        posts = Post.allPosts
+        tableView.reloadData()
     }
-    */
 
 }
 
@@ -88,17 +94,32 @@ extension InterestViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return posts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Post Cell", forIndexPath: indexPath)
-        return cell
+        let post = posts[indexPath.row]
+        
+        if post.postImage != nil {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PostCellWithImage", forIndexPath: indexPath) as! PostTableViewCell
+            cell.post = post
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PostCellWithoutImage", forIndexPath: indexPath) as! PostTableViewCell
+            cell.post = post
+            return cell
+        }
     }
 }
 
 extension InterestViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         updateHeaderView()
+        
+        if scrollView.contentOffset.y < -tableHeaderHeight {
+            headerView.pullDownToCloseLabel.hidden = false
+        } else {
+            headerView.pullDownToCloseLabel.hidden = true
+        }
     }
 }
