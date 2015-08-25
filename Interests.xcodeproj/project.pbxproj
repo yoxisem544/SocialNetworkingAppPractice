@@ -16,6 +16,7 @@
 		635BBE491B8B4D6D007B1D03 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE481B8B4D6D007B1D03 /* HomeViewController.swift */; };
 		635BBE4B1B8B5CD6007B1D03 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE4A1B8B5CD6007B1D03 /* Interest.swift */; };
 		635BBE4F1B8B6178007B1D03 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE4E1B8B6178007B1D03 /* InterestCollectionViewCell.swift */; };
+		635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE501B8C46F2007B1D03 /* InterestHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		635BBE481B8B4D6D007B1D03 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		635BBE4A1B8B5CD6007B1D03 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		635BBE4E1B8B6178007B1D03 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		635BBE501B8C46F2007B1D03 /* InterestHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				635BBE481B8B4D6D007B1D03 /* HomeViewController.swift */,
 				635BBE4E1B8B6178007B1D03 /* InterestCollectionViewCell.swift */,
+				635BBE501B8C46F2007B1D03 /* InterestHeaderView.swift */,
 			);
 			name = "Home Screen";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				635BBE4F1B8B6178007B1D03 /* InterestCollectionViewCell.swift in Sources */,
 				635BBE4B1B8B5CD6007B1D03 /* Interest.swift in Sources */,
+				635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */,
 				635BBE171B8B4D06007B1D03 /* AppDelegate.swift in Sources */,
 				635BBE491B8B4D6D007B1D03 /* HomeViewController.swift in Sources */,
 			);
