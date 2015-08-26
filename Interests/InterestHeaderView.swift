@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol InterestHeaderViewDelegate {
+    func closeButtonTapped()
+}
+
 class InterestHeaderView: UIView {
     
     // MARK: - public api
@@ -15,6 +19,12 @@ class InterestHeaderView: UIView {
         didSet {
             updateUI()
         }
+    }
+    
+    var delegate: InterestHeaderViewDelegate!
+    
+    @IBAction func closeButtonTapped(sender: UIButton) {
+        delegate.closeButtonTapped()
     }
     
     private func updateUI() {

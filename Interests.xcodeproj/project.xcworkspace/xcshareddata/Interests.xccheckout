@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E23A8227-5EF9-4AC1-A2B4-FE3F089E4534</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</key>
+		<string>https://github.com/yoxisem544/SocialNetworkingAppPractice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Interests.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yoxisem544/SocialNetworkingAppPractice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Interests</string>
+		</dict>
+	</array>
+</dict>
+</plist>

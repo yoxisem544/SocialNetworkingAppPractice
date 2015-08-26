@@ -10,7 +10,7 @@ import UIKit
 
 class InterestViewController: UIViewController {
     
-    var interests: Interest! = Interest.createInterests()[0]
+    var interest: Interest! = Interest.createInterests()[0]
     
     // MARK: - private
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +21,13 @@ class InterestViewController: UIViewController {
     private var headerMaskLayer: CAShapeLayer!
     
     private var posts = [Post]()
+    
+    // MARK: - view controller life cycle
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +37,9 @@ class InterestViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         headerView = tableView.tableHeaderView as! InterestHeaderView
+        headerView.delegate = self
+        headerView.interest = interest
+        
         tableView.tableHeaderView = nil
         tableView.addSubview(headerView)
         
@@ -47,6 +57,10 @@ class InterestViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     override func viewWillLayoutSubviews() {
@@ -115,11 +129,22 @@ extension InterestViewController: UITableViewDataSource {
 extension InterestViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         updateHeaderView()
+        let adjustment: CGFloat = 160.0
         
+        if scrollView.contentOffset.y < -(tableHeaderHeight + adjustment) {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+            
         if scrollView.contentOffset.y < -tableHeaderHeight {
             headerView.pullDownToCloseLabel.hidden = false
         } else {
             headerView.pullDownToCloseLabel.hidden = true
         }
+    }
+}
+
+extension InterestViewController: InterestHeaderViewDelegate {
+    func closeButtonTapped() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

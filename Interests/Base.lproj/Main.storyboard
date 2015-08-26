@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xwj-dH-ELC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9cI-nV-1xO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -86,6 +86,7 @@
                                                     <connections>
                                                         <outlet property="featuredImageView" destination="LMP-DX-FU9" id="Rj7-hg-M8u"/>
                                                         <outlet property="interestTitleLabel" destination="kzz-c5-GZb" id="Zr7-pt-eWj"/>
+                                                        <segue destination="02f-gz-dOK" kind="presentation" identifier="Show Interest" id="8BK-GO-q4Y"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -94,7 +95,47 @@
                                                 <outlet property="delegate" destination="9cI-nV-1xO" id="MVf-tc-nAW"/>
                                             </connections>
                                         </collectionView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1z-sE-0Mq">
+                                            <rect key="frame" x="8" y="28" width="89" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="Discover" image="search">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woN-x7-Z28">
+                                            <rect key="frame" x="8" y="562" width="123" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <state key="normal" title="New Interest" image="add">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-og-dmO">
+                                            <rect key="frame" x="541" y="558" width="51" height="30"/>
+                                            <state key="normal" title="Everlyn">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-Ix-g1x">
+                                            <rect key="frame" x="503" y="558" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="JBF-K7-LiX"/>
+                                                <constraint firstAttribute="width" constant="30" id="kCv-PO-SeC"/>
+                                            </constraints>
+                                            <state key="normal" image="profile1"/>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Q1z-sE-0Mq" firstAttribute="leading" secondItem="JK9-7I-BrG" secondAttribute="leading" constant="8" id="4NA-FE-KXo"/>
+                                        <constraint firstAttribute="bottom" secondItem="g5a-Ix-g1x" secondAttribute="bottom" constant="12" id="B1L-X7-AIY"/>
+                                        <constraint firstItem="woN-x7-Z28" firstAttribute="leading" secondItem="JK9-7I-BrG" secondAttribute="leading" constant="8" id="CpM-xf-Zfb"/>
+                                        <constraint firstAttribute="bottom" secondItem="woN-x7-Z28" secondAttribute="bottom" constant="16" id="EgN-ps-0eA"/>
+                                        <constraint firstItem="Q1z-sE-0Mq" firstAttribute="top" secondItem="JK9-7I-BrG" secondAttribute="top" constant="28" id="I4t-1c-Tmy"/>
+                                        <constraint firstAttribute="trailing" secondItem="yHd-og-dmO" secondAttribute="trailing" constant="8" id="X5P-9a-SzL"/>
+                                        <constraint firstAttribute="bottom" secondItem="yHd-og-dmO" secondAttribute="bottom" constant="12" id="cW0-mT-Ohz"/>
+                                        <constraint firstItem="yHd-og-dmO" firstAttribute="leading" secondItem="g5a-Ix-g1x" secondAttribute="trailing" constant="8" id="jrD-Ub-JZp"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -114,6 +155,8 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="JBA-mI-vTG" id="fox-ej-EHh"/>
                         <outlet property="collectionView" destination="4aA-Kx-4D6" id="1qW-oT-RSi"/>
+                        <outlet property="currentUserFullNameButton" destination="yHd-og-dmO" id="yCL-Gd-uLL"/>
+                        <outlet property="currentUserProfileImageButton" destination="g5a-Ix-g1x" id="6WC-Il-bEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pao-Xs-Xs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -123,7 +166,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Gt8-ri-CcK">
             <objects>
-                <navigationController id="02f-gz-dOK" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="02f-gz-dOK" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7I1-rQ-far">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -192,6 +236,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <state key="normal" image="CloseButton"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTapped:" destination="Vn3-cz-pQs" eventType="touchUpInside" id="Ufr-tG-u4T"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </view>
@@ -234,7 +281,7 @@
                                         <rect key="frame" x="0.0" y="228" width="600" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xv2-Wq-GcT" id="uXt-pW-jzN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="387"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="zqm-xl-xsr">
@@ -262,13 +309,13 @@
                                                         <constraint firstAttribute="height" constant="200" id="mWE-bK-RCN"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We walked to Antartica yesterday, and camped with some cute pinguines. and about this wonderful app ides.😀😅😅" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWQ-4f-PlF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We walked to Antartica yesterday, and camped with some cute pinguines. and about this wonderful app ides.😀😅😅" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWQ-4f-PlF">
                                                     <rect key="frame" x="16" y="283" width="568" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ol-4w-r3J" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ol-4w-r3J" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="340" width="120" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="xwv-4B-JZA"/>
@@ -279,7 +326,7 @@
                                                         <action selector="likeButtonClicked:" destination="Xv2-Wq-GcT" eventType="touchUpInside" id="ueS-MP-Sii"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nw-Zu-Meq" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nw-Zu-Meq" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="152" y="340" width="120" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="U8C-aA-cY3"/>
@@ -326,7 +373,7 @@
                                         <rect key="frame" x="0.0" y="615" width="600" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k1L-Gk-deI" id="A3z-3i-CH4">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="8wt-6f-3g4">
@@ -348,13 +395,13 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We walked to Antartica yesterday, and camped with some cute pinguines. and about this wonderful app ides.😀😅😅" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-K9-cOo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We walked to Antartica yesterday, and camped with some cute pinguines. and about this wonderful app ides.😀😅😅" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-K9-cOo">
                                                     <rect key="frame" x="16" y="60" width="568" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcA-Vq-Bbh" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcA-Vq-Bbh" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="117" width="120" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="pIJ-1E-od6"/>
@@ -365,7 +412,7 @@
                                                         <action selector="likeButtonClicked:" destination="k1L-Gk-deI" eventType="touchUpInside" id="3tO-Ia-Clf"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-5z-fzE" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-5z-fzE" customClass="DesignableButton" customModule="Interests" customModuleProvider="target">
                                                     <rect key="frame" x="152" y="117" width="120" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="dfF-Im-ceA"/>
@@ -434,8 +481,10 @@
     </scenes>
     <resources>
         <image name="CloseButton" width="17" height="17"/>
+        <image name="add" width="20" height="20"/>
         <image name="p6" width="2500" height="1667"/>
         <image name="profile1" width="806" height="674"/>
         <image name="r1" width="1500" height="1026"/>
+        <image name="search" width="18" height="18"/>
     </resources>
 </document>

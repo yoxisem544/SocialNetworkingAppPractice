@@ -25,6 +25,19 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if UIScreen.mainScreen().bounds.size.height == 480.0 {
+            // iphone 4s
+            let flowlayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            flowlayout.itemSize = CGSize(width: 250.0, height: 300.0)
+        }
+        
+        configureUserProfile()
+    }
+    
+    func configureUserProfile() {
+        currentUserProfileImageButton.contentMode = UIViewContentMode.ScaleAspectFill
+        currentUserProfileImageButton.clipsToBounds = true
+        currentUserProfileImageButton.layer.cornerRadius = currentUserProfileImageButton.bounds.width / 2
     }
     
     
@@ -35,6 +48,17 @@ class HomeViewController: UIViewController {
     
     private struct Storyboard {
         static let CellIdentifier = "Interest Cell"
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Show Interest" {
+            let cell = sender as! InterestCollectionViewCell
+            let interest = cell.interest
+            
+            let navigationViewController = segue.destinationViewController as! UINavigationController
+            let interestViewController = navigationViewController.topViewController as! InterestViewController
+            interestViewController.interest = interest
+        }
     }
 }
 
