@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6324BC201B8EF9B4004A299C /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */; };
+		635AB1D31B8F0AA900533D93 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1C81B8F0AA900533D93 /* AnimationController.swift */; };
+		635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1C91B8F0AA900533D93 /* ImageAction.swift */; };
+		635AB1D51B8F0AA900533D93 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1CA1B8F0AA900533D93 /* ImageCollectionViewCell.swift */; };
+		635AB1D61B8F0AA900533D93 /* ImagePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1CB1B8F0AA900533D93 /* ImagePickerCollectionView.swift */; };
+		635AB1D71B8F0AA900533D93 /* ImagePickerSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1CD1B8F0AA900533D93 /* ImagePickerSheetController.swift */; };
+		635AB1D81B8F0AA900533D93 /* ImagePreviewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1CE1B8F0AA900533D93 /* ImagePreviewFlowLayout.swift */; };
+		635AB1D91B8F0AA900533D93 /* ImagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1CF1B8F0AA900533D93 /* ImagePreviewTableViewCell.swift */; };
+		635AB1DA1B8F0AA900533D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635AB1D01B8F0AA900533D93 /* Images.xcassets */; };
+		635AB1DB1B8F0AA900533D93 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 635AB1D11B8F0AA900533D93 /* Info.plist */; };
+		635AB1DC1B8F0AA900533D93 /* PreviewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1D21B8F0AA900533D93 /* PreviewSupplementaryView.swift */; };
 		635BBE171B8B4D06007B1D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE161B8B4D06007B1D03 /* AppDelegate.swift */; };
 		635BBE1C1B8B4D06007B1D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BBE1A1B8B4D06007B1D03 /* Main.storyboard */; };
 		635BBE1E1B8B4D06007B1D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635BBE1D1B8B4D06007B1D03 /* Assets.xcassets */; };
@@ -70,6 +81,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		635AB1C81B8F0AA900533D93 /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		635AB1C91B8F0AA900533D93 /* ImageAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAction.swift; sourceTree = "<group>"; };
+		635AB1CA1B8F0AA900533D93 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		635AB1CB1B8F0AA900533D93 /* ImagePickerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionView.swift; sourceTree = "<group>"; };
+		635AB1CC1B8F0AA900533D93 /* ImagePickerSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerSheetController.h; sourceTree = "<group>"; };
+		635AB1CD1B8F0AA900533D93 /* ImagePickerSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerSheetController.swift; sourceTree = "<group>"; };
+		635AB1CE1B8F0AA900533D93 /* ImagePreviewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewFlowLayout.swift; sourceTree = "<group>"; };
+		635AB1CF1B8F0AA900533D93 /* ImagePreviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewTableViewCell.swift; sourceTree = "<group>"; };
+		635AB1D01B8F0AA900533D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		635AB1D11B8F0AA900533D93 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635AB1D21B8F0AA900533D93 /* PreviewSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSupplementaryView.swift; sourceTree = "<group>"; };
 		635BBE131B8B4D06007B1D03 /* Interests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635BBE161B8B4D06007B1D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635BBE1B1B8B4D06007B1D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +170,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635AB1C71B8F0AA900533D93 /* ImagePickerSheet */ = {
+			isa = PBXGroup;
+			children = (
+				635AB1C81B8F0AA900533D93 /* AnimationController.swift */,
+				635AB1C91B8F0AA900533D93 /* ImageAction.swift */,
+				635AB1CA1B8F0AA900533D93 /* ImageCollectionViewCell.swift */,
+				635AB1CB1B8F0AA900533D93 /* ImagePickerCollectionView.swift */,
+				635AB1CC1B8F0AA900533D93 /* ImagePickerSheetController.h */,
+				635AB1CD1B8F0AA900533D93 /* ImagePickerSheetController.swift */,
+				635AB1CE1B8F0AA900533D93 /* ImagePreviewFlowLayout.swift */,
+				635AB1CF1B8F0AA900533D93 /* ImagePreviewTableViewCell.swift */,
+				635AB1D01B8F0AA900533D93 /* Images.xcassets */,
+				635AB1D11B8F0AA900533D93 /* Info.plist */,
+				635AB1D21B8F0AA900533D93 /* PreviewSupplementaryView.swift */,
+			);
+			path = ImagePickerSheet;
+			sourceTree = "<group>";
+		};
 		635BBE0A1B8B4D06007B1D03 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +214,7 @@
 				635BBE4D1B8B5F20007B1D03 /* Home Screen */,
 				635BBE161B8B4D06007B1D03 /* AppDelegate.swift */,
 				635BBE1A1B8B4D06007B1D03 /* Main.storyboard */,
+				635AB1C71B8F0AA900533D93 /* ImagePickerSheet */,
 				635BBE571B8CBA19007B1D03 /* Spring */,
 				635BBE4C1B8B5F0F007B1D03 /* Model */,
 				635BBE1D1B8B4D06007B1D03 /* Assets.xcassets */,
@@ -226,6 +268,7 @@
 				635BBE501B8C46F2007B1D03 /* InterestHeaderView.swift */,
 				635BBE521B8C677F007B1D03 /* InterestViewController.swift */,
 				635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */,
+				6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */,
 			);
 			name = "Interest Screen";
 			sourceTree = "<group>";
@@ -373,8 +416,10 @@
 				635BBE821B8CBA19007B1D03 /* Info.plist in Resources */,
 				635BBE211B8B4D06007B1D03 /* LaunchScreen.storyboard in Resources */,
 				635BBE1E1B8B4D06007B1D03 /* Assets.xcassets in Resources */,
+				635AB1DA1B8F0AA900533D93 /* Images.xcassets in Resources */,
 				635BBE1C1B8B4D06007B1D03 /* Main.storyboard in Resources */,
 				635BBE851B8CBA19007B1D03 /* LoadingView.xib in Resources */,
+				635AB1DB1B8F0AA900533D93 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +447,10 @@
 				635BBE531B8C677F007B1D03 /* InterestViewController.swift in Sources */,
 				635BBE7F1B8CBA19007B1D03 /* DesignableTextView.swift in Sources */,
 				635BBE871B8CBA19007B1D03 /* SoundPlayer.swift in Sources */,
+				635AB1D61B8F0AA900533D93 /* ImagePickerCollectionView.swift in Sources */,
+				635AB1D71B8F0AA900533D93 /* ImagePickerSheetController.swift in Sources */,
 				635BBE891B8CBA19007B1D03 /* SpringAnimation.swift in Sources */,
+				635AB1DC1B8F0AA900533D93 /* PreviewSupplementaryView.swift in Sources */,
 				635BBE761B8CBA19007B1D03 /* AsyncButton.swift in Sources */,
 				635BBE8F1B8CBA19007B1D03 /* SpringView.swift in Sources */,
 				635BBE831B8CBA19007B1D03 /* KeyboardLayoutConstraint.swift in Sources */,
@@ -421,20 +469,26 @@
 				635BBE921B8CBA19007B1D03 /* UnwindSegue.swift in Sources */,
 				635BBE771B8CBA19007B1D03 /* AsyncImageView.swift in Sources */,
 				635BBE4B1B8B5CD6007B1D03 /* Interest.swift in Sources */,
+				635AB1D31B8F0AA900533D93 /* AnimationController.swift in Sources */,
 				635BBE951B8CC450007B1D03 /* Post.swift in Sources */,
 				635BBE841B8CBA19007B1D03 /* LoadingView.swift in Sources */,
 				635BBE881B8CBA19007B1D03 /* Spring.swift in Sources */,
+				635AB1D51B8F0AA900533D93 /* ImageCollectionViewCell.swift in Sources */,
 				635BBE8D1B8CBA19007B1D03 /* SpringTextField.swift in Sources */,
 				635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */,
 				635BBE791B8CBA19007B1D03 /* BlurView.swift in Sources */,
 				635BBE811B8CBA19007B1D03 /* ImageLoader.swift in Sources */,
+				635AB1D81B8F0AA900533D93 /* ImagePreviewFlowLayout.swift in Sources */,
 				635BBE8E1B8CBA19007B1D03 /* SpringTextView.swift in Sources */,
 				635BBE171B8B4D06007B1D03 /* AppDelegate.swift in Sources */,
 				635BBE861B8CBA19007B1D03 /* Misc.swift in Sources */,
 				635BBE491B8B4D6D007B1D03 /* HomeViewController.swift in Sources */,
 				635BBE801B8CBA19007B1D03 /* DesignableView.swift in Sources */,
+				635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */,
 				635BBE911B8CBA19007B1D03 /* TransitionZoom.swift in Sources */,
 				635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */,
+				635AB1D91B8F0AA900533D93 /* ImagePreviewTableViewCell.swift in Sources */,
+				6324BC201B8EF9B4004A299C /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +715,7 @@
 				635BBE3D1B8B4D06007B1D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		635BBE3E1B8B4D06007B1D03 /* Build configuration list for PBXNativeTarget "InterestsTests" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +724,7 @@
 				635BBE401B8B4D06007B1D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		635BBE411B8B4D06007B1D03 /* Build configuration list for PBXNativeTarget "InterestsUITests" */ = {
 			isa = XCConfigurationList;
@@ -677,6 +733,7 @@
 				635BBE431B8B4D06007B1D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
