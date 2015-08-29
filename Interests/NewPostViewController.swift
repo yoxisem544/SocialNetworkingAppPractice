@@ -31,7 +31,33 @@ class NewPostViewController: UIViewController {
         // Do any additional setup after loading the view.
         postContentTxetView?.becomeFirstResponder()
         postContentTxetView?.text = ""
+        
+        currentUserPorfileImageView?.layer.cornerRadius = currentUserPorfileImageView.bounds.width / 2
+        currentUserPorfileImageView.clipsToBounds = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardDidHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardDidShowNotification, object: nil)
     }
+    
+    // MARK: - text view handler
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        let userInfo = notification.userInfo ?? [:]
+        let keyboardSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        
+        self.postContentTxetView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+        self.postContentTxetView.scrollIndicatorInsets = self.postContentTxetView.contentInset
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.postContentTxetView.contentInset = UIEdgeInsetsZero
+        self.postContentTxetView.scrollIndicatorInsets = UIEdgeInsetsZero
+    }
+    
+    // MARK: - pick feature image
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -69,7 +95,29 @@ class NewPostViewController: UIViewController {
     }
     
     func presentCamera() {
-        
+        // chanllenge
+        let imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = false
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
 
+    @IBAction func dismiss() {
+        self.postContentTxetView.resignFirstResponder()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func post() {
+        self.postContentTxetView.resignFirstResponder()
+        // TODO: - create a new post, and send to parse
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension NewPostViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        self.postImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

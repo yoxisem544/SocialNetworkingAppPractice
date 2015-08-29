@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol PostTableViewCellDelegate {
+    func commentButtonClicked(post: Post)
+}
 class PostTableViewCell: UITableViewCell {
 
     // MARK: - public api
@@ -17,6 +20,7 @@ class PostTableViewCell: UITableViewCell {
         }
     }
     
+    var delegate: PostTableViewCellDelegate!
     // MARK: - private
     private var currentUserDidLike: Bool = false
     
@@ -88,6 +92,8 @@ class PostTableViewCell: UITableViewCell {
         sender.damping = 0.1
         sender.velocity = 0.2
         sender.animate()
+        
+        delegate?.commentButtonClicked(post)
     }
     
     @IBOutlet weak var userProfileImageView: UIImageView!

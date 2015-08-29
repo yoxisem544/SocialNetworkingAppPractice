@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63006D151B9039B60086FA1B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63006D141B9039B60086FA1B /* Comment.swift */; };
+		63006D171B903A160086FA1B /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63006D161B903A160086FA1B /* CommentsViewController.swift */; };
+		631444A01B9051480071111C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6314449F1B9051480071111C /* CommentTableViewCell.swift */; };
+		6321438F1B8F7B1E00D1A66E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321438D1B8F7B1E00D1A66E /* ActionButton.swift */; };
+		632143901B8F7B1E00D1A66E /* ActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321438E1B8F7B1E00D1A66E /* ActionButtonItem.swift */; };
 		6324BC201B8EF9B4004A299C /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */; };
 		635AB1D31B8F0AA900533D93 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1C81B8F0AA900533D93 /* AnimationController.swift */; };
 		635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635AB1C91B8F0AA900533D93 /* ImageAction.swift */; };
@@ -81,6 +86,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63006D141B9039B60086FA1B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		63006D161B903A160086FA1B /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		6314449F1B9051480071111C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		6321438D1B8F7B1E00D1A66E /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		6321438E1B8F7B1E00D1A66E /* ActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonItem.swift; sourceTree = "<group>"; };
 		6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		635AB1C81B8F0AA900533D93 /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		635AB1C91B8F0AA900533D93 /* ImageAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAction.swift; sourceTree = "<group>"; };
@@ -170,6 +180,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63006D181B903A200086FA1B /* Comment Sreen */ = {
+			isa = PBXGroup;
+			children = (
+				63006D161B903A160086FA1B /* CommentsViewController.swift */,
+				6314449F1B9051480071111C /* CommentTableViewCell.swift */,
+			);
+			name = "Comment Sreen";
+			sourceTree = "<group>";
+		};
+		6321438C1B8F7B1E00D1A66E /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				6321438D1B8F7B1E00D1A66E /* ActionButton.swift */,
+				6321438E1B8F7B1E00D1A66E /* ActionButtonItem.swift */,
+			);
+			path = FloatingButton;
+			sourceTree = "<group>";
+		};
 		635AB1C71B8F0AA900533D93 /* ImagePickerSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +242,7 @@
 				635BBE4D1B8B5F20007B1D03 /* Home Screen */,
 				635BBE161B8B4D06007B1D03 /* AppDelegate.swift */,
 				635BBE1A1B8B4D06007B1D03 /* Main.storyboard */,
+				6321438C1B8F7B1E00D1A66E /* FloatingButton */,
 				635AB1C71B8F0AA900533D93 /* ImagePickerSheet */,
 				635BBE571B8CBA19007B1D03 /* Spring */,
 				635BBE4C1B8B5F0F007B1D03 /* Model */,
@@ -245,6 +274,7 @@
 		635BBE4C1B8B5F0F007B1D03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63006D141B9039B60086FA1B /* Comment.swift */,
 				635BBE4A1B8B5CD6007B1D03 /* Interest.swift */,
 				635BBE931B8CC450007B1D03 /* Post.swift */,
 				635BBE941B8CC450007B1D03 /* User.swift */,
@@ -257,6 +287,7 @@
 			children = (
 				635BBE481B8B4D6D007B1D03 /* HomeViewController.swift */,
 				635BBE4E1B8B6178007B1D03 /* InterestCollectionViewCell.swift */,
+				63006D181B903A200086FA1B /* Comment Sreen */,
 				635BBE541B8C6829007B1D03 /* Interest Screen */,
 			);
 			name = "Home Screen";
@@ -471,9 +502,13 @@
 				635BBE4B1B8B5CD6007B1D03 /* Interest.swift in Sources */,
 				635AB1D31B8F0AA900533D93 /* AnimationController.swift in Sources */,
 				635BBE951B8CC450007B1D03 /* Post.swift in Sources */,
+				631444A01B9051480071111C /* CommentTableViewCell.swift in Sources */,
+				6321438F1B8F7B1E00D1A66E /* ActionButton.swift in Sources */,
 				635BBE841B8CBA19007B1D03 /* LoadingView.swift in Sources */,
 				635BBE881B8CBA19007B1D03 /* Spring.swift in Sources */,
+				63006D171B903A160086FA1B /* CommentsViewController.swift in Sources */,
 				635AB1D51B8F0AA900533D93 /* ImageCollectionViewCell.swift in Sources */,
+				632143901B8F7B1E00D1A66E /* ActionButtonItem.swift in Sources */,
 				635BBE8D1B8CBA19007B1D03 /* SpringTextField.swift in Sources */,
 				635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */,
 				635BBE791B8CBA19007B1D03 /* BlurView.swift in Sources */,
@@ -485,6 +520,7 @@
 				635BBE491B8B4D6D007B1D03 /* HomeViewController.swift in Sources */,
 				635BBE801B8CBA19007B1D03 /* DesignableView.swift in Sources */,
 				635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */,
+				63006D151B9039B60086FA1B /* Comment.swift in Sources */,
 				635BBE911B8CBA19007B1D03 /* TransitionZoom.swift in Sources */,
 				635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */,
 				635AB1D91B8F0AA900533D93 /* ImagePreviewTableViewCell.swift in Sources */,

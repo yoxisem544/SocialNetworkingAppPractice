@@ -22,11 +22,18 @@ class InterestViewController: UIViewController {
     
     private var posts = [Post]()
     
+    private var newPostButton: ActionButton!
+    
     // MARK: - view controller life cycle
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+//        
+//    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
     }
 
     override func viewDidLoad() {
@@ -51,8 +58,17 @@ class InterestViewController: UIViewController {
         headerView.layer.mask = headerMaskLayer
         
         updateHeaderView()
+        createNewPostButton()
         
         fetchPosts()
+    }
+    
+    func createNewPostButton() {
+        newPostButton = ActionButton(attachedToView: self.view, items: [])
+        newPostButton.action = { button in
+            self.performSegueWithIdentifier("Show Post Composer", sender: nil)
+        }
+        // set the button's backgroundColor
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -99,6 +115,14 @@ class InterestViewController: UIViewController {
         posts = Post.allPosts
         tableView.reloadData()
     }
+    
+    // MARK: - navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Show Comments" {
+            let commentsVC = segue.destinationViewController as! CommentsViewController
+            commentsVC.post = sender as! Post
+        }
+    }
 
 }
 
@@ -117,12 +141,21 @@ extension InterestViewController: UITableViewDataSource {
         if post.postImage != nil {
             let cell = tableView.dequeueReusableCellWithIdentifier("PostCellWithImage", forIndexPath: indexPath) as! PostTableViewCell
             cell.post = post
+            cell.delegate = self
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("PostCellWithoutImage", forIndexPath: indexPath) as! PostTableViewCell
             cell.post = post
+            cell.delegate = self
             return cell
         }
+    }
+}
+
+extension InterestViewController : UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.performSegueWithIdentifier("Show Comments", sender: self.posts[indexPath.row])
     }
 }
 
@@ -146,5 +179,11 @@ extension InterestViewController: UIScrollViewDelegate {
 extension InterestViewController: InterestHeaderViewDelegate {
     func closeButtonTapped() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension InterestViewController: PostTableViewCellDelegate {
+    func commentButtonClicked(post: Post) {
+        self.performSegueWithIdentifier("Show Comments", sender: post)
     }
 }

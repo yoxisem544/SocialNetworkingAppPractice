@@ -30,8 +30,8 @@ class InterestHeaderView: UIView {
     private func updateUI() {
         backgroundImageView?.image! = interest.featuredImage
         interestTitleLabel?.text! = interest.title
-        numberOfMembersLabel?.text! = "\(interest.numberOfMembers)"
-        numberOfPostsLabel?.text! = "\(interest.numberOfPosts)"
+        numberOfMembersLabel?.text! = "\(interest.numberOfMembers) members"
+        numberOfPostsLabel?.text! = "\(interest.numberOfPosts) posts"
         pullDownToCloseLabel?.text! = "Pull down to close"
         pullDownToCloseLabel?.hidden = true
     }
