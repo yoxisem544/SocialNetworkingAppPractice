@@ -66,6 +66,9 @@
 		635BBE951B8CC450007B1D03 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE931B8CC450007B1D03 /* Post.swift */; };
 		635BBE961B8CC450007B1D03 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE941B8CC450007B1D03 /* User.swift */; };
 		635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */; };
+		638CEE6B1B920A3300A3CE8C /* NewInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CEE6A1B920A3300A3CE8C /* NewInterestViewController.swift */; };
+		63E802E51B97E4BD00D99040 /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */; };
+		63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +156,9 @@
 		635BBE931B8CC450007B1D03 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		635BBE941B8CC450007B1D03 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		638CEE6A1B920A3300A3CE8C /* NewInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewInterestViewController.swift; sourceTree = "<group>"; };
+		63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
+		63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,8 @@
 			children = (
 				635BBE481B8B4D6D007B1D03 /* HomeViewController.swift */,
 				635BBE4E1B8B6178007B1D03 /* InterestCollectionViewCell.swift */,
+				638CEE6A1B920A3300A3CE8C /* NewInterestViewController.swift */,
+				63E802E61B97EB0F00D99040 /* Transition Animators */,
 				63006D181B903A200086FA1B /* Comment Sreen */,
 				635BBE541B8C6829007B1D03 /* Interest Screen */,
 			);
@@ -300,6 +308,7 @@
 				635BBE521B8C677F007B1D03 /* InterestViewController.swift */,
 				635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */,
 				6324BC1F1B8EF9B4004A299C /* NewPostViewController.swift */,
+				63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */,
 			);
 			name = "Interest Screen";
 			sourceTree = "<group>";
@@ -339,6 +348,14 @@
 				635BBE751B8CBA19007B1D03 /* UnwindSegue.swift */,
 			);
 			path = Spring;
+			sourceTree = "<group>";
+		};
+		63E802E61B97EB0F00D99040 /* Transition Animators */ = {
+			isa = PBXGroup;
+			children = (
+				63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */,
+			);
+			name = "Transition Animators";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +494,7 @@
 			files = (
 				635BBE531B8C677F007B1D03 /* InterestViewController.swift in Sources */,
 				635BBE7F1B8CBA19007B1D03 /* DesignableTextView.swift in Sources */,
+				63E802E51B97E4BD00D99040 /* SlideRightTransitionAnimator.swift in Sources */,
 				635BBE871B8CBA19007B1D03 /* SoundPlayer.swift in Sources */,
 				635AB1D61B8F0AA900533D93 /* ImagePickerCollectionView.swift in Sources */,
 				635AB1D71B8F0AA900533D93 /* ImagePickerSheetController.swift in Sources */,
@@ -504,6 +522,7 @@
 				635BBE951B8CC450007B1D03 /* Post.swift in Sources */,
 				631444A01B9051480071111C /* CommentTableViewCell.swift in Sources */,
 				6321438F1B8F7B1E00D1A66E /* ActionButton.swift in Sources */,
+				638CEE6B1B920A3300A3CE8C /* NewInterestViewController.swift in Sources */,
 				635BBE841B8CBA19007B1D03 /* LoadingView.swift in Sources */,
 				635BBE881B8CBA19007B1D03 /* Spring.swift in Sources */,
 				63006D171B903A160086FA1B /* CommentsViewController.swift in Sources */,
@@ -522,6 +541,7 @@
 				635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */,
 				63006D151B9039B60086FA1B /* Comment.swift in Sources */,
 				635BBE911B8CBA19007B1D03 /* TransitionZoom.swift in Sources */,
+				63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */,
 				635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */,
 				635AB1D91B8F0AA900533D93 /* ImagePreviewTableViewCell.swift in Sources */,
 				6324BC201B8EF9B4004A299C /* NewPostViewController.swift in Sources */,

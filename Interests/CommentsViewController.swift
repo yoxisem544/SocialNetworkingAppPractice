@@ -52,7 +52,7 @@ class CommentsViewController: UIViewController {
         // is this correct?
         newCommentButton = ActionButton(attachedToView: self.view, items: [])
         newCommentButton.action = { button in
-            self.performSegueWithIdentifier("Show Post Composer", sender: nil)
+            self.performSegueWithIdentifier("Show New Comment", sender: nil)
         }
         // set the button's backgroundColor
     }
@@ -68,6 +68,9 @@ class CommentsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "Show New Comment" {
+            print()
+        }
     }
 
 

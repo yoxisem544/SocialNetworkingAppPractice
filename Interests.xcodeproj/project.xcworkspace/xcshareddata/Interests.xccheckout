@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E23A8227-5EF9-4AC1-A2B4-FE3F089E4534</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Interests</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</key>
 		<string>https://github.com/yoxisem544/SocialNetworkingAppPractice.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Interests.xcodeproj/project.xcworkspace</string>
+	<string>Interests.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>632908EC2490A59EAE0E3FEFB38B2574D3C76CB9</key>
