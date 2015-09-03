@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     
     // MARK: - collection view data source
     private var interests = Interest.createInterests()
+    private var slideRightTransitionAnimator = SlideRightTransitionAnimator()
+    private var popTransitionAnimator = PopTransitionAnimator()
     
     // MAKR: - view life cycle
     override func viewDidLoad() {
@@ -56,8 +58,13 @@ class HomeViewController: UIViewController {
             let interest = cell.interest
             
             let navigationViewController = segue.destinationViewController as! UINavigationController
+            navigationViewController.transitioningDelegate = popTransitionAnimator
             let interestViewController = navigationViewController.topViewController as! InterestViewController
+            
             interestViewController.interest = interest
+        } else if segue.identifier == "CreateNewInterest" {
+            let newInterestViewController = segue.destinationViewController as! NewInterestViewController
+            newInterestViewController.transitioningDelegate = slideRightTransitionAnimator
         }
     }
 }

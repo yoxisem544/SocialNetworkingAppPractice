@@ -68,6 +68,8 @@
 		635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */; };
 		638CEE6B1B920A3300A3CE8C /* NewInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CEE6A1B920A3300A3CE8C /* NewInterestViewController.swift */; };
 		63E802E51B97E4BD00D99040 /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */; };
+		63E802E81B9843FE00D99040 /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */; };
+		63E802EA1B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */; };
 		63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +160,8 @@
 		635BBE971B8CC806007B1D03 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		638CEE6A1B920A3300A3CE8C /* NewInterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewInterestViewController.swift; sourceTree = "<group>"; };
 		63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
+		63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightThenPopTransitionAnimator.swift; sourceTree = "<group>"; };
 		63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */,
+				63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */,
+				63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */,
 			);
 			name = "Transition Animators";
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				635AB1D61B8F0AA900533D93 /* ImagePickerCollectionView.swift in Sources */,
 				635AB1D71B8F0AA900533D93 /* ImagePickerSheetController.swift in Sources */,
 				635BBE891B8CBA19007B1D03 /* SpringAnimation.swift in Sources */,
+				63E802EA1B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift in Sources */,
 				635AB1DC1B8F0AA900533D93 /* PreviewSupplementaryView.swift in Sources */,
 				635BBE761B8CBA19007B1D03 /* AsyncButton.swift in Sources */,
 				635BBE8F1B8CBA19007B1D03 /* SpringView.swift in Sources */,
@@ -531,6 +538,7 @@
 				635BBE8D1B8CBA19007B1D03 /* SpringTextField.swift in Sources */,
 				635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */,
 				635BBE791B8CBA19007B1D03 /* BlurView.swift in Sources */,
+				63E802E81B9843FE00D99040 /* PopTransitionAnimator.swift in Sources */,
 				635BBE811B8CBA19007B1D03 /* ImageLoader.swift in Sources */,
 				635AB1D81B8F0AA900533D93 /* ImagePreviewFlowLayout.swift in Sources */,
 				635BBE8E1B8CBA19007B1D03 /* SpringTextView.swift in Sources */,
