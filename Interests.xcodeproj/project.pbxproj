@@ -72,6 +72,8 @@
 		63E802EA1B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */; };
 		63E802EC1B98C00800D99040 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802EB1B98C00800D99040 /* CardView.swift */; };
 		63E802EE1B98C76100D99040 /* InterestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802ED1B98C76100D99040 /* InterestButton.swift */; };
+		63E802F11B98CF1300D99040 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802F01B98CF1300D99040 /* DiscoverTableViewCell.swift */; };
+		63E802F31B98D28E00D99040 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802F21B98D28E00D99040 /* DiscoverViewController.swift */; };
 		63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +168,8 @@
 		63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightThenPopTransitionAnimator.swift; sourceTree = "<group>"; };
 		63E802EB1B98C00800D99040 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		63E802ED1B98C76100D99040 /* InterestButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestButton.swift; sourceTree = "<group>"; };
+		63E802F01B98CF1300D99040 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		63E802F21B98D28E00D99040 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -372,8 +376,10 @@
 		63E802EF1B98C93500D99040 /* Discover Screen */ = {
 			isa = PBXGroup;
 			children = (
+				63E802F21B98D28E00D99040 /* DiscoverViewController.swift */,
 				63E802EB1B98C00800D99040 /* CardView.swift */,
 				63E802ED1B98C76100D99040 /* InterestButton.swift */,
+				63E802F01B98CF1300D99040 /* DiscoverTableViewCell.swift */,
 			);
 			name = "Discover Screen";
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				635AB1D61B8F0AA900533D93 /* ImagePickerCollectionView.swift in Sources */,
 				635AB1D71B8F0AA900533D93 /* ImagePickerSheetController.swift in Sources */,
 				635BBE891B8CBA19007B1D03 /* SpringAnimation.swift in Sources */,
+				63E802F31B98D28E00D99040 /* DiscoverViewController.swift in Sources */,
 				63E802EA1B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift in Sources */,
 				635AB1DC1B8F0AA900533D93 /* PreviewSupplementaryView.swift in Sources */,
 				635BBE761B8CBA19007B1D03 /* AsyncButton.swift in Sources */,
@@ -554,6 +561,7 @@
 				635BBE511B8C46F2007B1D03 /* InterestHeaderView.swift in Sources */,
 				635BBE791B8CBA19007B1D03 /* BlurView.swift in Sources */,
 				63E802E81B9843FE00D99040 /* PopTransitionAnimator.swift in Sources */,
+				63E802F11B98CF1300D99040 /* DiscoverTableViewCell.swift in Sources */,
 				635BBE811B8CBA19007B1D03 /* ImageLoader.swift in Sources */,
 				635AB1D81B8F0AA900533D93 /* ImagePreviewFlowLayout.swift in Sources */,
 				635BBE8E1B8CBA19007B1D03 /* SpringTextView.swift in Sources */,

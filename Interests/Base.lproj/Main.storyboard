@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Discover View Controller-->
         <scene sceneID="BEW-oM-fCJ">
             <objects>
-                <viewController id="Omj-kw-Kzz" sceneMemberID="viewController">
+                <viewController id="Omj-kw-Kzz" customClass="DiscoverViewController" customModule="Interests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XAa-9c-P2A"/>
                         <viewControllerLayoutGuide type="bottom" id="HIR-8r-mO8"/>
@@ -33,6 +33,9 @@
                                         </constraints>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="CloseButton"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="Omj-kw-Kzz" eventType="touchUpInside" id="v76-gP-hNf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-iU-LTQ">
                                         <rect key="frame" x="575" y="30" width="17" height="22"/>
@@ -42,33 +45,39 @@
                                         </constraints>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="Refresh"/>
+                                        <connections>
+                                            <action selector="refreshButtonClicked:" destination="Omj-kw-Kzz" eventType="touchUpInside" id="arP-P9-Hxm"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="289" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BNA-Cu-bLC">
                                         <rect key="frame" x="0.0" y="62" width="600" height="538"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="300" id="adE-Pd-bqc">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Interest Cell" rowHeight="300" id="adE-Pd-bqc" customClass="DiscoverTableViewCell" customModule="Interests" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22" width="600" height="300"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adE-Pd-bqc" id="HWU-2h-44s">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apw-EH-OCt">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apw-EH-OCt" customClass="CardView" customModule="Interests" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="584" height="283"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a really nice Interest name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-S3-MGK">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a really nice Interest name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-S3-MGK">
                                                                     <rect key="frame" x="8" y="16" width="506" height="26"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyl-tp-dhB">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyl-tp-dhB" customClass="InterestButton" customModule="Interests" customModuleProvider="target">
                                                                     <rect key="frame" x="522" y="12" width="50" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="K6Z-QC-ky3"/>
                                                                     </constraints>
                                                                     <state key="normal" title="→"/>
+                                                                    <connections>
+                                                                        <action selector="jsonButtonClicked:" destination="adE-Pd-bqc" eventType="touchUpInside" id="mNK-Th-ihy"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r5" translatesAutoresizingMaskIntoConstraints="NO" id="QyU-CG-bZF">
                                                                     <rect key="frame" x="8" y="58" width="564" height="150"/>
@@ -108,8 +117,19 @@
                                                         <constraint firstAttribute="bottom" secondItem="apw-EH-OCt" secondAttribute="bottom" constant="8" id="kto-Ir-GpL"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="backgroundViewWithShadow" destination="apw-EH-OCt" id="ivR-4z-ubJ"/>
+                                                    <outlet property="interestDescriptionLabel" destination="W8w-sc-WqR" id="ciD-9h-ize"/>
+                                                    <outlet property="interestFeaturedImage" destination="QyU-CG-bZF" id="FQ2-bW-k5a"/>
+                                                    <outlet property="interestTitleLabel" destination="m8T-S3-MGK" id="5ld-Dr-3ei"/>
+                                                    <outlet property="joinButton" destination="Kyl-tp-dhB" id="zcw-aY-rrH"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Omj-kw-Kzz" id="kdg-Ec-zGs"/>
+                                            <outlet property="delegate" destination="Omj-kw-Kzz" id="2XX-dq-VWe"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
@@ -136,6 +156,11 @@
                             <constraint firstItem="HIR-8r-mO8" firstAttribute="top" secondItem="ai5-xL-6Tz" secondAttribute="bottom" id="iDL-bk-f7N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="refreshButton" destination="D9b-iU-LTQ" id="q5R-vd-K7a"/>
+                        <outlet property="searchBar" destination="8Wx-Ko-4LY" id="RxV-H5-DeP"/>
+                        <outlet property="tableView" destination="BNA-Cu-bLC" id="fiA-QI-aZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWh-2x-Sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
