@@ -70,6 +70,8 @@
 		63E802E51B97E4BD00D99040 /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */; };
 		63E802E81B9843FE00D99040 /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */; };
 		63E802EA1B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */; };
+		63E802EC1B98C00800D99040 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802EB1B98C00800D99040 /* CardView.swift */; };
+		63E802EE1B98C76100D99040 /* InterestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E802ED1B98C76100D99040 /* InterestButton.swift */; };
 		63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +164,8 @@
 		63E802E41B97E4BD00D99040 /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
 		63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
 		63E802E91B98762500D99040 /* SlideRightThenPopTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideRightThenPopTransitionAnimator.swift; sourceTree = "<group>"; };
+		63E802EB1B98C00800D99040 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		63E802ED1B98C76100D99040 /* InterestButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestButton.swift; sourceTree = "<group>"; };
 		63FCE2F01B918D98001B81B1 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +256,7 @@
 				635BBE4D1B8B5F20007B1D03 /* Home Screen */,
 				635BBE161B8B4D06007B1D03 /* AppDelegate.swift */,
 				635BBE1A1B8B4D06007B1D03 /* Main.storyboard */,
+				63E802EF1B98C93500D99040 /* Discover Screen */,
 				6321438C1B8F7B1E00D1A66E /* FloatingButton */,
 				635AB1C71B8F0AA900533D93 /* ImagePickerSheet */,
 				635BBE571B8CBA19007B1D03 /* Spring */,
@@ -362,6 +367,15 @@
 				63E802E71B9843FE00D99040 /* PopTransitionAnimator.swift */,
 			);
 			name = "Transition Animators";
+			sourceTree = "<group>";
+		};
+		63E802EF1B98C93500D99040 /* Discover Screen */ = {
+			isa = PBXGroup;
+			children = (
+				63E802EB1B98C00800D99040 /* CardView.swift */,
+				63E802ED1B98C76100D99040 /* InterestButton.swift */,
+			);
+			name = "Discover Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +526,7 @@
 				635BBE831B8CBA19007B1D03 /* KeyboardLayoutConstraint.swift in Sources */,
 				635BBE901B8CBA19007B1D03 /* TransitionManager.swift in Sources */,
 				635BBE4F1B8B6178007B1D03 /* InterestCollectionViewCell.swift in Sources */,
+				63E802EC1B98C00800D99040 /* CardView.swift in Sources */,
 				635BBE781B8CBA19007B1D03 /* AutoTextView.swift in Sources */,
 				635BBE7C1B8CBA19007B1D03 /* DesignableLabel.swift in Sources */,
 				635BBE8B1B8CBA19007B1D03 /* SpringImageView.swift in Sources */,
@@ -548,6 +563,7 @@
 				635BBE801B8CBA19007B1D03 /* DesignableView.swift in Sources */,
 				635AB1D41B8F0AA900533D93 /* ImageAction.swift in Sources */,
 				63006D151B9039B60086FA1B /* Comment.swift in Sources */,
+				63E802EE1B98C76100D99040 /* InterestButton.swift in Sources */,
 				635BBE911B8CBA19007B1D03 /* TransitionZoom.swift in Sources */,
 				63FCE2F11B918D98001B81B1 /* NewCommentViewController.swift in Sources */,
 				635BBE981B8CC806007B1D03 /* PostTableViewCell.swift in Sources */,
